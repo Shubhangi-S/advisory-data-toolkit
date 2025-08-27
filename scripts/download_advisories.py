@@ -1,5 +1,9 @@
-# Placeholder for future GitHub advisory downloader using API or Git clone
-# For now, advisories should be placed manually in the 'data/raw_advisories/' folder
+"""
+Placeholder downloader.
 
-def download_advisories():
-    print("Download logic not implemented yet. Please manually download from GitHub.")
+Deliberately not implemented to keep the repository lightweight.
+Place advisory *.json files under data/raw_advisories/ as described in the README.
+"""
+
+def download_advisories() -> None:
+    print("[info] Download not implemented. See README for instructions.")
