@@ -11,7 +11,7 @@ This project processes security advisories into structured outputs. It ingests J
   2. ZIPs of advisories grouped into low, moderate, high, and critical.  
 - **KEV integration**: CISA’s KEV catalog is a practical way to flag vulnerabilities that are actually exploited.  
 - **Performance/scalability**: Designed to work with the full GitHub advisory-database (~hundreds of thousands of JSON files).  
-- **Repo design**: Kept `data/` and `output/` out of version control to keep it lightweight. Added `tests/` as a placeholder — if I had more time, I’d add unit tests for severity parsing and KEV matching.
+- **Repo design**: Kept `data/` and `output/` out of version control to keep it lightweight. Added `tests/` with a minimal unit test for severity parsing.
 
 ---
 
@@ -52,7 +52,7 @@ Each CSV row includes:
 ## Notes
 
 - Data and outputs are not stored in the repo — they’re generated when you run the scripts.  
-- The `tests/` directory is currently just a placeholder.  
+- The tests/ directory includes a minimal unit test (test_process.py) that validates severity parsing. With more time, this could be extended to CSV generation and KEV matching.
 - Running on the full advisory-database produces warnings from Python’s `zipfile` about duplicate filenames (when the same GHSA ID exists in multiple subfolders). These don’t affect the CSV or the contents of the ZIPs.  
 
 ---
