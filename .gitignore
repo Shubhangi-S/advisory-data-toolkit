@@ -1,0 +1,8 @@
+__pycache__/
+.DS_Store
+output/
+data/zipped_advisories/
+data/raw_advisories/
+advisory-database/
+*.zip
+*.csv
